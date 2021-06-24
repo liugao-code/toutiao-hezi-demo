@@ -7,7 +7,6 @@ import App from './App.vue'
 // 导入路由
 import router from './router'
 
-
 // 导入 ElementUI 
 import ElementUI from 'element-ui';
 // 导入 ElementUI 样式
@@ -16,7 +15,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 // 导入全局样式文件
-import './styles/index.less';
+import './styles/index.less'; 
 
 Vue.config.productionTip = false
 
