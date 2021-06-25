@@ -125,6 +125,7 @@
                 type="primary"
                 size="mini"
                 circle
+                @click="$router.push('/publish?id=' + scope.row.id.toString())"
               ></el-button>
               <el-button
                 size="mini"
