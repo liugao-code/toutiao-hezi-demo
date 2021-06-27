@@ -30,10 +30,10 @@ export const getArticlesChannels = () => {
 /**
  * 删除文章
  */
-export const deleteArticle = id => {
+export const deleteArticle = Id => {
   return request({
     method: 'DELETE',
-    url: `/mp/v1_0/articles/${id}`,
+    url: `/mp/v1_0/articles/${Id}`,
   })
 }
 
@@ -59,10 +59,10 @@ export const addArticle = (data, draft = false) => {
 /**
  * 修改文章
  */
-export const updateArticle = (id, data, draft = false) => {
+export const updateArticle = (Id, data, draft = false) => {
   return request({
     method: 'PUT',
-    url: `/mp/v1_0/articles/${id}`,
+    url: `/mp/v1_0/articles/${Id}`,
     params: {
       // 相同名字就可以简写
       // draft: draft
@@ -75,9 +75,25 @@ export const updateArticle = (id, data, draft = false) => {
 /**
  * 获取指定文章
  */
-export const getArticle = id => {
+export const getArticle = Id => {
   return request({
     method: 'GET',
-    url: `/mp/v1_0/articles/${id}`,
+    url: `/mp/v1_0/articles/${Id}`,
+  })
+}
+
+/**
+ * 修改文章评论状态
+ */
+export const updateCommentStatus = (Id, allowComment) => {
+  return request({
+    method: 'PUT',
+    url: '/mp/v1_0/comments/status',
+    params: {
+      article_id: Id,
+    },
+    data: {
+      allow_comment: allowComment
+    }
   })
 }
