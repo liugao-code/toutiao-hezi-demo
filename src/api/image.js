@@ -2,7 +2,7 @@
  * 素材请求相关模块
  */
 
-import request from '@/utils/request';
+import request from '@/utils/request'
 
 /**
  * 上传图片素材
@@ -17,7 +17,6 @@ export const uploadImage = data => {
     data
   })
 }
-
 
 /**
  * 获取图片素材
@@ -49,6 +48,7 @@ export const collectImages = (ImageId, collect) => {
 export const deleteImages = ImageId => {
   return request({
     method: 'DELETE',
-    url: `/mp/v1_0/user/images/${ImageId}`,
+    url: `/mp/v1_0/user/images/${ImageId}`
   })
 }
+
