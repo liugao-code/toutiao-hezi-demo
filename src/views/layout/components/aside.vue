@@ -3,7 +3,7 @@
     el-menu-item 的 index 不能重复，确保唯一即可
    -->
   <el-menu
-    default-active="/"
+    :default-active="$route.path"
     background-color="#002033"
     text-color="#fff"
     active-text-color="#ffd04b"
@@ -45,8 +45,7 @@
 export default {
   name: 'AppAside',
   data() {
-    return {
-    }
+    return {}
   },
   components: {},
   props: ['is-collapse'],
