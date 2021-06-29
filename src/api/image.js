@@ -51,4 +51,3 @@ export const deleteImages = ImageId => {
     url: `/mp/v1_0/user/images/${ImageId}`
   })
 }
-
